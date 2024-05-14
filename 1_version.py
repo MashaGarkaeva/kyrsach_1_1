@@ -1,21 +1,21 @@
-import math
-from array import array
 import matplotlib.pyplot as plt
 import numpy as np
 
 
-file = open("C:\\Users\\мария\\PycharmProjects\\cyrsMatcad_1\\data_csv.csv",'w')
+file = open("C:\\Users\\мария\\PycharmProjects\\cyrsMatcad_1\\data.csv",'w')
 plt.grid()
+step = 2*np.pi / 99
 for i in range (99):
-    x = np.linspace(-3.14, 3.14)
+    x = np.linspace(-3.14, 3.14, 99)
     y = np.sin(x) + np.exp(x/2)
+print(y)
 file.writelines(str(y))
 
 file.close()
 plt.plot( x, y, '--')
 
-
 plt.show()
+
 '''
 x = []
 y = []
